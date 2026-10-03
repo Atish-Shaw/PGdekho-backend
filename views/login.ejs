@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | PIGI</title>
+    <!-- Tailwind CSS CDN for testing/preview -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/output.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col antialiased selection:bg-indigo-100 selection:text-indigo-700">
+
+    <!-- Ambient background glow -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[42rem] h-[42rem] bg-indigo-50/60 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-gray-200/80 sticky top-0 z-20">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 group">
+                
+                <span class="text-xl font-bold tracking-tight text-gray-900 group-hover:text-indigo-600 transition">
+                    PIGI
+                </span>
+            </a>
+            <a href="/help" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition">
+                Need help?
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-1 flex items-center justify-center px-4 py-12">
+        <div class="w-full max-w-[440px]">
+
+            <!-- Card -->
+            <div class="bg-white rounded-3xl border border-gray-200/80 shadow-xl shadow-gray-200/50 p-8 sm:p-10">
+                
+                <!-- Heading -->
+                <div class="text-center mb-8">
+                    <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900">
+                        Welcome to PIGI
+                    </h1>
+                    <p class="text-sm text-gray-500 mt-2">
+                        Select an account type to access your dashboard
+                    </p>
+                </div>
+
+                <!-- Action Options -->
+                <div class="space-y-3.5">
+                    
+                    <!-- User Login (Primary Role) -->
+                    <a href="/user-login"
+                        class="group relative flex items-center justify-between w-full p-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-md shadow-indigo-200 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0">
+                        <div class="flex items-center gap-3.5">
+                            <span class="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                                </svg>
+                            </span>
+                            <div class="text-left">
+                                <span class="block text-base font-semibold leading-tight">User Login</span>
+                                <span class="block text-xs text-indigo-100 font-normal mt-0.5">Explore places & book stays</span>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-white/70 group-hover:text-white group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </a>
+
+                    <!-- Host Login (Secondary Role) -->
+                    <a href="/host-login"
+                        class="group relative flex items-center justify-between w-full p-4 rounded-xl bg-white hover:bg-gray-50 text-gray-800 font-medium border border-gray-200 transition-all duration-200 hover:border-gray-300 hover:-translate-y-0.5 active:translate-y-0">
+                        <div class="flex items-center gap-3.5">
+                            <span class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center text-gray-600 group-hover:text-indigo-600 transition-colors">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                            </span>
+                            <div class="text-left">
+                                <span class="block text-base font-semibold leading-tight text-gray-900">Host Login</span>
+                                <span class="block text-xs text-gray-500 font-normal mt-0.5">Manage listings & bookings</span>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-700 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </a>
+
+                </div>
+
+                <!-- Divider -->
+                <div class="relative flex items-center justify-center my-7">
+                    <div class="border-t border-gray-200 w-full"></div>
+                    <span class="bg-white px-3 text-xs font-semibold uppercase tracking-wider text-gray-400 absolute">
+                        or
+                    </span>
+                </div>
+
+                <!-- Signup Link -->
+                <a href="/signup"
+                    class="block w-full py-3 px-4 rounded-xl text-center text-sm font-semibold text-indigo-600 bg-indigo-50/60 hover:bg-indigo-100/70 border border-indigo-100 transition-colors">
+                    Don't have an account? <span class="underline underline-offset-2">Sign up</span>
+                </a>
+
+            </div>
+
+            <!-- Footer Links -->
+            <p class="text-center text-xs text-gray-400 mt-6">
+                By continuing, you agree to PIGI's 
+                <a href="/terms" class="text-gray-600 hover:underline">Terms</a> and 
+                <a href="/privacy" class="text-gray-600 hover:underline">Privacy Policy</a>.
+            </p>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
